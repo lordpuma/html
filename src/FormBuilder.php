@@ -506,9 +506,9 @@ class FormBuilder
         // assume some sane default values for these attributes for the developer.
         $options = $this->setTextAreaSize($options);
 
-        $options['id'] = $this->getIdAttribute($name, $options);
+        $options['id'] = $this->getIdAttribute($options['name'], $options);
 
-        $value = (string) $this->getValueAttribute($name, $value);
+        $value = (string) $this->getValueAttribute($options['name'], $value);
 
         unset($options['size']);
 
