@@ -276,10 +276,10 @@ class FormBuilder
         // We will get the appropriate value for the given field. We will look for the
         // value in the session for the value in the old input data then we'll look
         // in the model instance if one is set. Otherwise we will just use empty.
-        $id = $this->getIdAttribute($name, $options);
+        $id = $this->getIdAttribute($options['name'], $options);
 
         if (! in_array($type, $this->skipValueTypes)) {
-            $value = $this->getValueAttribute($name, $value);
+            $value = $this->getValueAttribute($options['name'], $value);
         }
 
         // Once we have the type, value, and ID we can merge them into the rest of the
